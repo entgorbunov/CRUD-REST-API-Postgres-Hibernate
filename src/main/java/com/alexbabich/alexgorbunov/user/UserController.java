@@ -13,6 +13,7 @@ public class UserController {
 
     @GetMapping
     public List<User> getAllUsers() {
+
         return userRepository.findAll();
     }
 

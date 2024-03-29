@@ -1,15 +1,16 @@
+
+
 plugins {
     java
     id("org.springframework.boot") version "3.2.4"
     id("io.spring.dependency-management") version "1.1.4"
+    id("com.palantir.docker") version "0.36.0"
 }
 
-group = "com.AlexBabich.AlexGorbunov"
+
+group = "com.alexbabich.alexgorbunov"
 version = "0.0.1-SNAPSHOT"
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-}
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenCentral()
@@ -25,3 +26,7 @@ dependencies {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+
+
+

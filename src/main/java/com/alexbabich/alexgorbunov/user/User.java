@@ -3,6 +3,8 @@ package com.alexbabich.alexgorbunov.user;
 import jakarta.persistence.*;
 import java.util.Date; // Import Date for the created field
 
+//@Entity
+//@Table(name = "users")
 @Entity
 @Table(name = "users")
 public class User {
@@ -10,20 +12,20 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "first_name") // Adjusted for first_name
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "last_name") // Adjusted for last_name
+    @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "phone") // Added for phone
+    @Column(name = "phone")
     private String phone;
 
-    @Column(name = "created") // Added for created
-    @Temporal(TemporalType.TIMESTAMP) // This ensures the date is stored as a timestamp
+    @Column(name = "created")
+    @Temporal(TemporalType.TIMESTAMP)
     private Date created;
 
-    @Column(name = "email") // No change here
+    @Column(name = "email")
     private String email;
 
     // Getters and setters

@@ -1,0 +1,27 @@
+#spring:
+#  application:
+#    name: CRUD-REST-API-Postgres-Hibernate
+#  datasource:
+#    url: jdbc:postgresql://localhost:5435/postgres
+#    username: postgres
+#    password: s9td3ixh
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+spring:
+  application:
+    name: CRUD-REST-API-Postgres-Hibernate
+  datasource:
+    url: jdbc:postgresql://postgres-Alex:5434/postgres
+    username: postgres
+    password: s9td3ixh
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect

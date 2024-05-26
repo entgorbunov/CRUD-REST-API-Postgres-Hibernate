@@ -1,17 +1,30 @@
 version: '3.9'
 
 services:
-  java_db:
-    container_name: postgres
+  db:
+    container_name: alex_crud
     image: postgres
     ports:
-      - "5432:5432"
+      - "5434:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: s9td3ixh
       POSTGRES_DB: postgres
     volumes:
       - pgdata:/var/lib/postgresql/data
+
+  app:
+    container_name: alex_crud
+    build: .
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres-Alex
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-Alex:5432/postgres
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: s9td3ixh
 
 volumes:
   pgdata:
